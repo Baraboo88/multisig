@@ -1,8 +1,8 @@
 // MY INFURA_ID, SWAP IN YOURS FROM https://infura.io/dashboard/ethereum
-export const INFURA_ID = "8e2d4cd0d25d4e75ac2f2ab969f77009";
+export const INFURA_ID = "4fd778a3c5c74fd7ae36f9ee88092580";
 
 // MY ETHERSCAN_ID, SWAP IN YOURS FROM https://etherscan.io/myapikey
-export const ETHERSCAN_KEY = "PFCZTNTCSW72DNXHMBWRRCE9A7JRHT4PTU";
+export const ETHERSCAN_KEY = "SGMCTAIM3CKFZ81RN33JITQTHW4PRF63HC";
 
 // BLOCKNATIVE ID FOR Notify.js:
 export const BLOCKNATIVE_DAPPID = "0b58206a-f3c0-4701-a62f-73c7243e8c77";
@@ -14,13 +14,13 @@ const localRpcUrl = process.env.REACT_APP_CODESPACES
   : "http://" + (global.window ? window.location.hostname : "localhost") + ":8545";
 
 export const NETWORKS = {
-  localhost: {
-    name: "localhost",
-    color: "#666666",
-    chainId: 31337,
-    blockExplorer: "",
-    rpcUrl: localRpcUrl,
-  },
+  // localhost: {
+  //   name: "localhost",
+  //   color: "#666666",
+  //   chainId: 31337,
+  //   blockExplorer: "",
+  //   rpcUrl: localRpcUrl,
+  // },
   // mainnet: {
   //   name: "mainnet",
   //   color: "#ff8b9e",
@@ -36,14 +36,14 @@ export const NETWORKS = {
   //   blockExplorer: "https://kovan.etherscan.io/",
   //   faucet: "https://gitter.im/kovan-testnet/faucet", // https://faucet.kovan.network/
   // },
-  rinkeby: {
-    name: "rinkeby",
-    color: "#e0d068",
-    chainId: 4,
-    rpcUrl: `https://rinkeby.infura.io/v3/${INFURA_ID}`,
-    faucet: "https://faucet.rinkeby.io/",
-    blockExplorer: "https://rinkeby.etherscan.io/",
-  },
+  // rinkeby: {
+  //   name: "rinkeby",
+  //   color: "#e0d068",
+  //   chainId: 4,
+  //   rpcUrl: `https://rinkeby.infura.io/v3/${INFURA_ID}`,
+  //   faucet: "https://faucet.rinkeby.io/",
+  //   blockExplorer: "https://rinkeby.etherscan.io/",
+  // },
   // ropsten: {
   //   name: "ropsten",
   //   color: "#F60D09",
@@ -52,14 +52,14 @@ export const NETWORKS = {
   //   blockExplorer: "https://ropsten.etherscan.io/",
   //   rpcUrl: `https://ropsten.infura.io/v3/${INFURA_ID}`,
   // },
-  // goerli: {
-  //   name: "goerli",
-  //   color: "#0975F6",
-  //   chainId: 5,
-  //   faucet: "https://goerli-faucet.slock.it/",
-  //   blockExplorer: "https://goerli.etherscan.io/",
-  //   rpcUrl: `https://goerli.infura.io/v3/${INFURA_ID}`,
-  // },
+  goerli: {
+    name: "goerli",
+    color: "#0975F6",
+    chainId: 5,
+    faucet: "https://goerli-faucet.slock.it/",
+    blockExplorer: "https://goerli.etherscan.io/",
+    rpcUrl: `https://eth-goerli.g.alchemy.com/v2/p9r38IsErr-6P0j8WCSc-FO7x8SWNtqC`,
+  },
   // xdai: {
   //   name: "xdai",
   //   color: "#48a9a6",

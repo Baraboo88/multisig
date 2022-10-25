@@ -27,13 +27,13 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = "localhost";
+const defaultNetwork = "goerli";
 
 const mainnetGwei = 21;
 
 function mnemonic() {
   try {
-    return fs.readFileSync("./mnemonic.txt").toString().trim();
+    return fs.readFileSync("./mnemonic.secret").toString().trim();
   } catch (e) {
     if (defaultNetwork !== "localhost") {
       console.log(
@@ -103,7 +103,7 @@ module.exports = {
       },
     },
     goerli: {
-      url: "https://goerli.infura.io/v3/8e2d4cd0d25d4e75ac2f2ab969f77009", // <---- YOUR INFURA ID! (or it won't work)
+      url: "https://goerli.infura.io/v3/4fd778a3c5c74fd7ae36f9ee88092580", // <---- YOUR INFURA ID! (or it won't work)
       //      url: "https://speedy-nodes-nyc.moralis.io/XXXXXXXXXXXXXXXXXXXXXXXXX/eth/goerli", // <---- YOUR MORALIS ID! (not limited to infura)
       accounts: {
         mnemonic: mnemonic(),
@@ -319,7 +319,7 @@ module.exports = {
   },
   etherscan: {
     apiKey: {
-      mainnet: "PFCZTNTCSW72DNXHMBWRRCE9A7JRHT4PTU",
+      mainnet: "SGMCTAIM3CKFZ81RN33JITQTHW4PRF63HC",
       // add other network's API key here
     },
   },

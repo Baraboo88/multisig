@@ -59,7 +59,7 @@ const { ethers } = require("ethers");
 */
 
 /// 📡 What chain are your contracts deployed to?
-const initialNetwork = NETWORKS.localhost; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
+const initialNetwork = NETWORKS.goerli; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 
 // 😬 Sorry for all the console logging
 const DEBUG = true;
@@ -79,7 +79,7 @@ const providers = [
 function App(props) {
   // specify all the chains your app is available on. Eg: ['localhost', 'mainnet', ...otherNetworks ]
   // reference './constants.js' for other networks
-  const networkOptions = [initialNetwork.name, "mainnet", "rinkeby"];
+  const networkOptions = [initialNetwork.name];
 
   const [injectedProvider, setInjectedProvider] = useState();
   const [address, setAddress] = useState();
@@ -90,12 +90,14 @@ function App(props) {
 
   console.log("cachedNetwork: ", cachedNetwork);
 
-  const targetNetwork = NETWORKS[cachedNetwork || "rinkeby"];
+  const targetNetwork = NETWORKS["goerli"];
 
   // backend transaction handler:
+  //let BACKEND_URL = "http://localhost:49899/";
+
   let BACKEND_URL = "http://localhost:49899/";
   if (targetNetwork && targetNetwork.name && targetNetwork.name != "localhost") {
-    BACKEND_URL = "https://backend-eeemay-maas.herokuapp.com/";
+    BACKEND_URL = "https://multisig-app.herokuapp.com/";
   }
 
   // 🔭 block explorer URL
